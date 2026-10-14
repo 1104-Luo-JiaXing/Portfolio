@@ -1,5 +1,7 @@
 
-//Index Html
+// Index Html
+
+// Skills
 const skillsContainer = document.getElementById("skills-container");
 if (skillsContainer) {
   skillsContainer.innerHTML = skillCategories
@@ -14,6 +16,8 @@ if (skillsContainer) {
     .join("");
 }
 
+
+// Projects
 const projectsContainer = document.getElementById("projects-container");
 
 if (projectsContainer) {
@@ -57,3 +61,41 @@ if (projectsContainer) {
     `)
     .join("");
 }
+
+// Contact form
+const form = document.getElementById('form');
+const submitBtn = form.querySelector('button[type="submit"]');
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    formData.append("access_key", "16f28e51-1004-485b-9bc7-e60467ba5403");
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            alert("Success! Your message has been sent.");
+            form.reset();
+        } else {
+            alert("Error: " + data.message);
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    }
+});
