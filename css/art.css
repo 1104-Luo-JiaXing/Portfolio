@@ -1,0 +1,222 @@
+/* Section 1: Intro */
+.art-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.art-intro h1 {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.slogan {
+  font-size: 1.7rem;
+  font-style: italic;
+  margin-bottom: 48px;
+  color: #7cfffd;
+}
+
+.intro-text {
+  text-align: center;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  color: #d1d6d7;
+}
+
+.intro-text ul {
+  display: table;
+  margin: 16px auto 0;
+  padding: 0;
+  text-align: left;
+}
+
+.intro-text li {
+  margin-bottom: 6px;
+}
+
+.intro-text li::marker {
+  color: #2c80ff;
+}
+
+/* Section 2: Gallery */
+.arts-section {
+  width: 95%;
+  margin: 60px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.arts-title {
+  display: inline-block;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, #7cfffd, #2c80ff);
+  background-clip: text;
+  color: transparent;
+}
+
+.arts-text {
+  max-width: 700px;
+  margin: 0 auto 35px auto;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d1d6d7;
+}
+
+/* 5 equal columns, rows wrap automatically */
+.arts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* 5 per row: 4 gaps of 20px = 80px */
+.arts-item {
+  width: calc((100% - 80px) / 5);
+  cursor: pointer;
+}
+
+.arts-box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #141c2b;
+  border: 1px solid #336496;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.arts-box:hover {
+  transform: scale(1.05);
+  border-color: rgb(90, 156, 255);
+  box-shadow: 0 15px 35px rgba(60, 97, 247, 0.55);
+}
+
+/* Square frame that scales with the column */
+.arts-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.arts-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+.arts-name {
+  margin: 12px 0 0;
+  padding: 0;
+  font-size: 1.15rem;
+  color: #d1d6d7;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Responsive */
+
+/* 3 per row, 2 gaps of 20px */
+@media (max-width: 1100px) {
+  .arts-item { width: calc((100% - 40px) / 3); }
+}
+
+/* 2 per row, 1 gap */
+@media (max-width: 700px) {
+  .arts-section { width: 90%; }
+  .arts-item { width: calc((100% - 20px) / 2); }
+  .art-intro h1 { font-size: 2.4rem; }
+}
+
+/* 1 per row */
+@media (max-width: 450px) {
+  .arts-item { width: 100%; }
+}
+
+
+/* Pop-up window */
+.arts-box {
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100; /* above the navbar (z-index: 50) */
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px 25px 25px;
+  text-align: center;
+  background-color: #141c2b;
+  border: 1px solid #336496;
+  border-radius: 5px;
+  box-shadow: 0 15px 35px rgba(60, 97, 247, 0.55);
+}
+
+.modal-title {
+  display: inline-block;
+  margin: 0 0 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  color: #e8f1f5;
+}
+
+.modal-img {
+  display: block;
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  image-rendering: pixelated;   /* keeps pixel art sharp */
+}
+
+.modal-desc {
+  margin: 20px 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #d1d6d7;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #d1d6d7;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #7cfffd;
+}
