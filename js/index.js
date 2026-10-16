@@ -23,7 +23,7 @@ const projectsContainer = document.getElementById("projects-container");
 if (projectsContainer) {
   projectsContainer.innerHTML = projects
     .map(project => `
-      <div class="project-card">
+      <div class="project-card theme-${project.theme}">
         <!-- Left side -->
         <div class="project-left">
           <div class="project-video-box">
