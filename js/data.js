@@ -36,7 +36,7 @@ const projects = [
     type: "Team Project (3 members)",
     contributors: "Contributors: Jia Xing Luo, Trent Smelich, and one other teammate.",
     links: [
-      { label: "GitHub:", url: "https://github.com/trentsmelich/CS-Senior-Project" },
+      { label: "GitHub Repository:", url: "https://github.com/trentsmelich/CS-Senior-Project" },
       { label: "YouTube - My Part:", url: "https://www.youtube.com/watch?v=gK8ZnU1qHz0" },
       { label: "YouTube - Full Game:", url: "https://www.youtube.com/watch?v=LF0Ry_1E624" },
     ],
@@ -95,8 +95,8 @@ const projects = [
     type: "Individual Project",
     contributors: "Contributor: Jia Xing Luo",
     links: [
-      { label: "GitHub:", url: "https://github.com/" },
-      { label: "Portfolio URL:" },
+      { label: "GitHub Repository:", url: "https://github.com/1104-Luo-JiaXing/Portfolio" },
+      { label: "Live site:", url: "https://1104-luo-jiaxing.github.io/Portfolio/" },
     ],
 
     tags: ["HTML", "CSS", "JavaScript", "Front-end Development", "UI Design", "Visual Studio Code"],
