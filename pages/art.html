@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Jia Xing Luo</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/art.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-name">Jia Xing Luo</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!--Welcome Section-->
+  <section class="art-intro">
+    <h1>Welcome to My Art Gallery!</h1>
+    <p class="slogan">When imagination creates INFINITE possibilities.</p>
+
+    <div class="intro-text">
+      <p>
+        This gallery shows my art journey so far. Mastering art takes time, so I'll keep adding new pieces to show how I grow along the way.
+        Here is a collection of my work. Since I'm still learning, not every piece is perfect, and you'll see room for improvement in many of them. 
+        Each one reflects an idea, a practice session, or an experiment, and some were used in my projects. You'll find these categories:
+      </p>
+      <ul>
+        <li>Pixel Art</li>
+        <li>Digital Art</li>
+        <li>3D Model</li>
+        <li>Traditional Art</li>
+      </ul>
+    </div>
+
+    <a href="../index.html" class="intro-art-button">Back to Home</a>
+  </section>
+
+
+  <!--Art Galleries-->
+  <section class="arts-section">
+    <h2 class="arts-title">Pixel Art</h2>
+    <p class="arts-text">Pixel art made in Aseprite.</p>
+    <div class="arts-container" id="pixel-gallery">
+      <!--Generate Images using JS-->
+    </div>
+  </section>
+
+  <section class="arts-section">
+    <h2 class="arts-title">Digital Art</h2>
+    <p class="arts-text">Coming soon.</p>
+    <div class="arts-container" id="digital-gallery">
+      <!--Generate Images using JS-->
+    </div>
+  </section>
+
+  <section class="arts-section">
+    <h2 class="arts-title">3D Model</h2>
+    <p class="arts-text">3D model made in Blender.</p>
+    <div class="arts-container" id="model-gallery">
+      <!--Generate Images using JS-->
+    </div>
+  </section>
+
+  <section class="arts-section">
+    <h2 class="arts-title">Traditional Art</h2>
+    <p class="arts-text">Practice drawings from my sketchbook.</p>
+    <div class="arts-container" id="traditional-gallery">
+      <!--Generate Images using JS-->
+    </div>
+  </section>
+
+  <!--Pop Up Window-->
+  <div class="modal" id="art-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <h3 class="modal-title" id="modal-title"></h3>
+      <img class="modal-img" id="modal-img" src="" alt="">
+      <p class="modal-desc" id="modal-desc"></p>
+    </div>
+  </div>
+
+
+  <script src="../js/data.js"></script>
+  <script src="../js/art.js"></script>
+</body>
+</html>
