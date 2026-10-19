@@ -165,8 +165,7 @@
 }
 
 .about-box:hover {
-  transform: translateY(-7px);
-  border-width: 2px;
+  transform: scale(1.02);
   border-color: rgb(132, 154, 250);
   box-shadow: 0 10px 25px rgba(110, 198, 227, 0.15);
 }

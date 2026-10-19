@@ -16,13 +16,13 @@ const skillCategories = [
     skills: ["Unity", "C#", "C++", "2D Platformer", "2D Top Down", "Level Design", "Game Design", "Unity Animation", "UI/UX Design", "Heads-Up Display (HUD)"]},
 
   { title: "AI", 
-    skills: ["ChatGPT", "Claude AI", "Prompt Engineering", "Copilot", "AI Agent", "In-Context Learning", "GitHub Copilot", "Google Gemini", "AI-assisted debugging tools"]},
+    skills: ["ChatGPT", "Claude AI", "Copilot", "AI Agent", "GitHub Copilot", "Google Gemini", "AI-assisted debugging tools"]},
 
   { title: "Software & Tools", 
-    skills: ["Github", "GitKraken", "Visual Studio Code", "Kate Text Editor", "Replit", "Slack", "Word", "PowerPoint", "Excel", "Access", "Outlook"]},
+    skills: ["Git", "GitKraken", "Visual Studio Code", "Kate Text Editor", "Replit", "Slack", "Word", "PowerPoint", "Excel", "Access", "Outlook"]},
 
   { title: "Additional Skills", 
-    skills: ["Organization", "Time Management", "Data Entry", "Team Collaboration", "Customer Service", "Pallet Jack Operation", "Material Handling"]},
+    skills: ["Organization", "Time Management", "Problem-Solving", "Communication", "Collaboration", "Adaptability", "Data Entry", "Customer Service"]},
 ];
 
 
