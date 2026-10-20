@@ -10,7 +10,7 @@ const skillCategories = [
     skills: ["Data Structures", "Object-Oriented Programming", "Design Patterns"]},
 
   { title: "Frontend Development", 
-    skills: ["HTML", "CSS", "JavaScript", "UI/UX", "WordPress", "Wix"]},
+    skills: ["HTML", "CSS", "JavaScript", "UI"]},
 
   { title: "Game Development", 
     skills: ["Unity", "C#", "C++", "2D Platformer", "2D Top Down", "Level Design", "Game Design", "Unity Animation", "UI/UX Design", "Heads-Up Display (HUD)"]},
@@ -19,7 +19,7 @@ const skillCategories = [
     skills: ["ChatGPT", "Claude AI", "Copilot", "AI Agent", "GitHub Copilot", "Google Gemini", "AI-assisted debugging tools"]},
 
   { title: "Software & Tools", 
-    skills: ["Git", "GitKraken", "Visual Studio Code", "Kate Text Editor", "Replit", "Slack", "Word", "PowerPoint", "Excel", "Access", "Outlook"]},
+    skills: ["Git", "GitKraken", "Visual Studio Code", "Kate Text Editor", "Replit", "WordPress", "Wix", "Aseprite", "Blender", "Slack", "Word", "PowerPoint", "Excel", "Access", "Outlook"]},
 
   { title: "Additional Skills", 
     skills: ["Organization", "Time Management", "Problem-Solving", "Communication", "Collaboration", "Adaptability", "Data Entry", "Customer Service"]},
@@ -34,7 +34,7 @@ const projects = [
     name: "Cycle of the Dead",
     image: "assets/images/projects/cycle_of_the_dead.png",
     type: "Team Project (3 members)",
-    contributors: "Contributors: Jia Xing Luo, Trent Smelich, and one other teammate.",
+    contributors: "Contributors: Jia Xing Luo, Trent Smelich, and Luis Garcia",
     links: [
       { label: "GitHub Repository:", url: "https://github.com/trentsmelich/CS-Senior-Project" },
       { label: "YouTube - My Part:", url: "https://www.youtube.com/watch?v=gK8ZnU1qHz0" },
@@ -66,7 +66,7 @@ const projects = [
     image: "assets/images/projects/blade_of_the_beyond.png",
     theme: "blue",
     type: "Team Project (3 members)",
-    contributors: "Contributors: Jia Xing Luo, Trent Smelich, and one other teammate.",
+    contributors: "Contributors: Jia Xing Luo, Trent Smelich, and Luis Garcia",
     links: [
       { label: "YouTube - Full Gameplay:", url: "https://www.youtube.com/watch?v=gxDss0R4Ke4" },
     ],
@@ -148,7 +148,7 @@ const projects = [
     image: "assets/images/projects/youtube_data_analyzer.png",
     theme: "orange",
     type: "Team Project (3 members)",
-    contributors: "Contributors: Jia Xing Luo, Trent Smelich, and one other teammate.",
+    contributors: "Contributors: Jia Xing Luo, Trent Smelich, and Luis Garcia",
     links: [
       { label: "YouTube - My Part:", url: "https://www.youtube.com/watch?v=9j16kXQmCoY" },
     ],
@@ -226,4 +226,5 @@ const traditionalArtworks = [
   {src: "../assets/images/traditional/art6.jpg", title: "Drawing #06", description: "Practice sketch of an original character, drawn entirely from imagination with a 0.7mm mechanical pencil."},
   {src: "../assets/images/traditional/art7.jpg", title: "Drawing #07", description: "Practice sketch of an original character, drawn entirely from imagination with a 0.7mm mechanical pencil."},
   {src: "../assets/images/traditional/art8.jpg", title: "Drawing #08", description: "Practice sketch of an original character, drawn entirely from imagination with a 0.7mm mechanical pencil."},
+
 ];
