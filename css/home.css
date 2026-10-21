@@ -52,6 +52,44 @@
   color: #d1d6d7;
 }
 
+@media (max-width: 1000px) {
+  .welcome-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .welcome-slogan {
+    font-size: 0.9rem;
+  }
+
+  .welcome-message {
+    font-size: 1.85rem;
+  }
+
+  .welcome-sentence {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-image {
+    width: 175px;
+    height: 175px;
+  }
+
+  .welcome-slogan {
+    font-size: 0.7rem;
+  }
+
+  .welcome-message {
+    font-size: 1.7rem;
+  }
+
+  .welcome-sentence {
+    font-size: 0.9rem;
+  }
+}
+
 /* Social Items*/
 .social-title {
   font-size: 1.3rem;
@@ -63,7 +101,7 @@
 .social-links {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 15px;
 }
 
@@ -93,6 +131,18 @@
   color: #96f5fa;
 }
 
+@media (max-width: 800px) {
+  .social-links {
+    gap: 5px;
+  }
+
+  .social-link {
+    gap: 5px;
+    font-size: 0.9rem;
+  }
+}
+
+
 .welcome-section-button {
   display: inline-flex;
   align-items: center;
@@ -121,6 +171,17 @@
   transform: scale(1.06);
   box-shadow: 0 6px 20px rgba(62, 135, 245, 0.45);
   border-color: #75dfff;
+}
+
+@media (max-width: 800px) {
+  .welcome-section-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 25px;
+    font-size: 15px;
+    gap: 5px;
+  }
+
 }
 
 /* About me section */
@@ -236,6 +297,12 @@
   margin-bottom: 6px;
 }
 
+.school-award {
+  font-size: 1rem;
+  color: #ced8dc;
+  margin-bottom: 6px;
+}
+
 .school-gpa {
   font-size: 0.9rem;
   color: rgb(124, 235, 230);
@@ -258,13 +325,63 @@
   line-height: 1.6;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
+  .info-sentence {
+    font-size: 0.85rem;
+  }
+
+  .interests-sentence {
+    font-size: 0.85rem;
+  }
+
+  .school-name {
+    font-size: 0.8rem;
+  }
+
+  .school-degree {
+    font-size: 0.7rem;
+  }
+
+  .school-award {
+    font-size: 0.8rem;
+  }
+
+  .school-gpa {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 1100px) {
   .about-container {
     flex-direction: column;
   }
 
   .about-box {
     flex: none;
+  }
+
+  .info-sentence {
+    font-size: 1rem;
+  }
+
+  .interests-sentence {
+    font-size: 0.95rem;
+  }
+
+  .school-name {
+    font-size: 1.1rem;
+  }
+
+  .school-degree {
+    font-size: 0.9rem;
+  }
+
+  .school-award {
+    font-size: 1rem;
+  }
+
+  .school-gpa {
+    font-size: 0.9rem;
   }
 }
 
@@ -594,8 +711,6 @@
   --project-image-border:#65a30d;
 }
 
-
-/* Small view for project cards */
 @media (max-width: 1200px) {
   .project-card {
     flex-direction: column;
@@ -605,6 +720,36 @@
   .project-right {
     width: 100%;
     flex: none;
+  }
+
+  .project-link-row {
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  .project-type {
+    font-size: 1.25rem;
+  }
+
+  .project-contributors-row {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .project-link-row {
+    gap: 10px;
+    font-size: 1rem;
+  }
+
+  .project-type {
+    font-size: 1.15rem;
+  }
+
+  .project-contributors-row {
+    font-size: 0.9rem;
   }
 }
 
@@ -901,15 +1046,20 @@
 
 /* Responsive: stack the cards */
 @media (max-width: 1000px) {
-  .index-arts-container {
+  .index-art-container {
     flex-direction: column;
     align-items: center;
   }
 
-  .index-arts-box {
+  .index-art-box {
     flex: none;
     width: 100%;
     max-width: 500px;
+  }
+
+  .index-art-text {
+    max-width: 1350px;
+    font-size: 0.9rem;
   }
 }
 
@@ -917,6 +1067,7 @@
 .contact-section {
   padding: 60px 0;
   background-color: rgba(14, 20, 32, 0.5);
+  border-top: 2px solid #4a61e1;
 }
 
 .contact-inner {
