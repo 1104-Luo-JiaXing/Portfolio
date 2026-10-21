@@ -111,6 +111,9 @@ section {
     align-self: center;
     max-width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
     gap: 2px;
     margin: 0;
@@ -123,21 +126,20 @@ section {
 
   .nav-links li {
     flex-shrink: 0;
+    list-style: none;
   }
 
   .nav-links li a {
+    display: block;
     font-size: 1rem;
+    line-height: 1.2;
     padding: 6px 8px;
     white-space: nowrap;
   }
 }
 
-/* Small phone: shrink further */
-@media (max-width: 280px) {
-  .nav-name {
-    font-size: 0.95rem;
-  }
-
+/* Phone: shrink further */
+@media (max-width: 440px) {
   .nav-links li a {
     font-size: 0.55rem;
     padding: 5px 6px;
