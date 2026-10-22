@@ -34,12 +34,16 @@
 }
 
 .welcome-sentence {
-  width: fit-content;
+  width: 100%;                 /* fills the container instead of fit-content */
+  max-width: 100%;
   margin: 0 auto 25px auto;
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 3.6vw, 1.5rem);
   font-weight: bold;
+  white-space: nowrap;
+  text-align: center;
   background: linear-gradient(to right, #68f0c9, #54c9f7, #4a67ea);
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
 }
 
@@ -63,34 +67,47 @@
   }
 
   .welcome-message {
-    font-size: 1.85rem;
+    font-size: 1.9rem;
   }
 
   .welcome-sentence {
     font-size: 1.2rem;
   }
+
+  .welcome-paragraph {
+    font-size: 0.9rem;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
+  .welcome-container {
+    width: 95%;
+    padding: 40px 0;
+  }
+
   .welcome-image {
     width: 175px;
     height: 175px;
   }
 
-  .welcome-slogan {
-    font-size: 0.7rem;
+  .welcome-message {
+    font-size: 1.8rem;
   }
 
-  .welcome-message {
-    font-size: 1.7rem;
+  .welcome-slogan {
+    font-size: 0.9rem;
   }
 
   .welcome-sentence {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .welcome-paragraph {
+    font-size: 0.8rem;
   }
 }
 
-/* Social Items*/
+/* Social Items */
 .social-title {
   font-size: 1.3rem;
   font-weight: normal;

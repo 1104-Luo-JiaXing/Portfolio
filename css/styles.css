@@ -140,8 +140,12 @@ section {
 
 /* Phone: shrink further */
 @media (max-width: 440px) {
+  .nav-name {
+    font-size: 1.25rem;
+  }
+
   .nav-links li a {
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     padding: 5px 6px;
   }
 }
