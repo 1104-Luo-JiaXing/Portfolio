@@ -27,9 +27,27 @@ if (projectsContainer) {
         <!-- Left side -->
         <div class="project-left">
 
-          <div class="project-image-box">
-            <img src="${project.image}" alt="${project.title} preview" loading="lazy">
-          </div>
+          ${(() => {
+            const raw = project.images || (project.image ? [project.image] : []);
+            const images = raw.map(item => typeof item === "string" ? { src: item, title: "" } : item);
+            if (!images.length) return "";
+            return `
+              <div class="carousel" data-index="0">
+                ${images.some(img => img.title) ? `<p class="carousel-title">${images[0].title || ""}</p>` : ""}
+                <div class="project-image-box">
+                  <div class="carousel-track">
+                    ${images.map((img, i) => `
+                      <div class="carousel-slide" data-title="${img.title || ""}">
+                        <img src="${img.src}" alt="${img.title || project.title + " preview " + (i + 1)}" loading="lazy">
+                      </div>`).join("")}
+                  </div>
+                  ${images.length > 1 ? `
+                    <button type="button" class="carousel-btn carousel-prev" aria-label="Previous image">&#10094;</button>
+                    <button type="button" class="carousel-btn carousel-next" aria-label="Next image">&#10095;</button>
+                    <span class="carousel-count">1 / ${images.length}</span>` : ""}
+                </div>
+              </div>`;
+          })()}
 
           ${project.type ? `
           <p class="project-type">${project.type}</p>` : ""}
@@ -67,6 +85,30 @@ if (projectsContainer) {
     `)
     .join("");
 }
+
+// Project image carousel
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".carousel-btn");
+  if (!btn) return;
+
+  const box = btn.closest(".carousel");
+  const track = box.querySelector(".carousel-track");
+  const total = track.children.length;
+  let index = Number(box.dataset.index);
+
+  index = btn.classList.contains("carousel-next")
+    // after the last image, go back to the first
+    ? (index + 1) % total
+    // before the first image, go to the last
+    : (index - 1 + total) % total;
+
+  box.dataset.index = index;
+  track.style.transform = `translateX(-${index * 100}%)`;
+  box.querySelector(".carousel-count").textContent = `${index + 1} / ${total}`;
+
+  const title = box.querySelector(".carousel-title");
+  if (title) title.textContent = track.children[index].dataset.title;
+});
 
 // Contact form
 const form = document.getElementById('form');

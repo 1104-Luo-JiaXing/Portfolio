@@ -7,16 +7,16 @@ const skillCategories = [
     skills: ["C", "C++", "C#", "Java", "Python", "SQL"]},
 
   { title: "Software Development", 
-    skills: ["Data Structures", "Object-Oriented Programming", "Design Patterns"]},
+    skills: ["Data Structures", "Object-Oriented Programming", "Design Patterns", "UML", "State Machine", "Version Control", "Agile"]},
 
   { title: "Frontend Development", 
-    skills: ["HTML", "CSS", "JavaScript", "UI"]},
+    skills: ["HTML", "CSS", "JavaScript", "UI Design"]},
 
   { title: "Game Development", 
     skills: ["Unity", "C#", "C++", "2D Platformer", "2D Top Down", "Level Design", "Game Design", "Unity Animation", "UI/UX Design", "Heads-Up Display (HUD)"]},
 
   { title: "AI", 
-    skills: ["ChatGPT", "Claude AI", "Copilot", "AI Agent", "GitHub Copilot", "Google Gemini", "AI-assisted debugging tools"]},
+    skills: ["ChatGPT", "Claude", "Copilot", "Google Gemini", "AI Agent", "AI-assisted debugging tools"]},
 
   { title: "Software & Tools", 
     skills: ["Git", "GitHub", "GitKraken", "Visual Studio Code", "Kate Text Editor", "Replit", "WordPress", "Wix", "Aseprite", "Blender", "Slack", "Word", "PowerPoint", "Excel", "Access", "Outlook"]},
@@ -32,7 +32,23 @@ const projects = [
   // Cycle of the Dead
   {
     name: "Cycle of the Dead",
-    image: "assets/images/projects/cycle_of_the_dead.png",
+    images: [
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_1.png", title: "Main Menu" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_2.png", title: "Player Select" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_3.png", title: "Enemy Codex" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_4.png", title: "Level Select Menu" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_5.png", title: "Level 1" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_6.png", title: "Level 2" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_7.png", title: "Level 3" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_8.png", title: "Story Mode" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_9.png", title: "Level Boss" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_10.png", title: "Shop" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_11.png", title: "Shop Purchase Panel" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_12.png", title: "Tutorial" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_13.png", title: "Game Over Screen" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_14.png", title: "Settings Panel" },
+      { src: "assets/images/projects/cycle_of_the_dead/COTD_15.png", title: "Keybinds Panel" },
+    ],
     type: "Team Project (3 members)",
     contributors: "Contributors: Jia Xing Luo, Trent Smelich, and Luis Garcia",
     links: [
@@ -63,7 +79,15 @@ const projects = [
   // Blade of the Beyond
   {
     name: "Blade of the Beyond",
-    image: "assets/images/projects/blade_of_the_beyond.png",
+    images: [
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_1.png", title: "Level 1" },
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_2.png", title: "Level 1 Boss" },
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_3.png", title: "Level 2" },
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_4.png", title: "Level 2 Boss" },
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_5.png", title: "Main Menu" },
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_6.png", title: "Level Select Panel" },
+      { src: "assets/images/projects/blade_of_the_beyond/BOTB_7.png", title: "Settings Panel" },
+    ],
     theme: "blue",
     type: "Team Project (3 members)",
     contributors: "Contributors: Jia Xing Luo, Trent Smelich, and Luis Garcia",
@@ -96,7 +120,7 @@ const projects = [
     contributors: "Contributor: Jia Xing Luo",
     links: [
       { label: "GitHub Repository:", url: "https://github.com/1104-Luo-JiaXing/Portfolio" },
-      { label: "Live site:", url: "https://1104-luo-jiaxing.github.io/Portfolio/" },
+      { label: "Live site (You are here!):", url: "https://1104-luo-jiaxing.github.io/Portfolio/" },
     ],
 
     tags: ["HTML", "CSS", "JavaScript", "Front-end Development", "UI Design", "Visual Studio Code", "GitHub", "GitKraken"],
@@ -118,7 +142,13 @@ const projects = [
   // Graphic Reality
   {
     name: "Graphic Reality",
-    image: "assets/images/projects/graphic_reality.png",
+    images: [
+      { src: "assets/images/projects/graphic_reality/GR_1.png", title: "Home Page" },
+      { src: "assets/images/projects/graphic_reality/GR_2.png", title: "Products Page" },
+      { src: "assets/images/projects/graphic_reality/GR_3.png", title: "Shopping Cart Page" },
+      { src: "assets/images/projects/graphic_reality/GR_4.png", title: "Bulk Upload/Download Page" },
+      { src: "assets/images/projects/graphic_reality/GR_5.png", title: "Edit Product Page" },
+    ],
     theme: "lime",
     type: "Individual Project",
     contributors: "Contributor: Jia Xing Luo",
@@ -145,7 +175,11 @@ const projects = [
   // YouTube Data Analyzer
   {
     name: "YouTube Data Analyzer",
-    image: "assets/images/projects/youtube_data_analyzer.png",
+    images: [
+      { src: "assets/images/projects/youtube_data_analyzer/YDA_1.png", title: "Top 5 Rated Videos Results" },
+      { src: "assets/images/projects/youtube_data_analyzer/YDA_2.png", title: "Top 7 Most Popular Videos Results" },
+      { src: "assets/images/projects/youtube_data_analyzer/YDA_3.png", title: "Top 10 Categories Results" },
+    ],
     theme: "orange",
     type: "Team Project (3 members)",
     contributors: "Contributors: Jia Xing Luo, Trent Smelich, and Luis Garcia",
