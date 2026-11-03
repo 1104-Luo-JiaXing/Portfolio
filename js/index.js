@@ -24,61 +24,69 @@ if (projectsContainer) {
   projectsContainer.innerHTML = projects
     .map(project => `
       <div class="project-card theme-${project.theme}">
-        <!-- Left side -->
-        <div class="project-left">
 
-          ${(() => {
-            const raw = project.images || (project.image ? [project.image] : []);
-            const images = raw.map(item => typeof item === "string" ? { src: item, title: "" } : item);
-            if (!images.length) return "";
-            return `
-              <div class="carousel" data-index="0">
-                ${images.some(img => img.title) ? `<p class="carousel-title">${images[0].title || ""}</p>` : ""}
-                <div class="project-image-box">
-                  <div class="carousel-track">
-                    ${images.map((img, i) => `
-                      <div class="carousel-slide" data-title="${img.title || ""}">
-                        <img src="${img.src}" alt="${img.title || project.title + " preview " + (i + 1)}" loading="lazy">
-                      </div>`).join("")}
+        <!-- Title (top, spans both sides) -->
+        <h3 class="project-name">${project.name}</h3>
+
+        <div class="project-body">
+
+          <!-- Left side -->
+          <div class="project-left">
+
+            ${(() => {
+              const raw = project.images || (project.image ? [project.image] : []);
+              const images = raw.map(item => typeof item === "string" ? { src: item, title: "" } : item);
+              if (!images.length) return "";
+              return `
+                <div class="carousel" data-index="0">
+                  ${images.some(img => img.title) ? `<p class="carousel-title">${images[0].title || ""}</p>` : ""}
+                  <div class="project-image-box">
+                    <div class="carousel-track">
+                      ${images.map((img, i) => `
+                        <div class="carousel-slide" data-title="${img.title || ""}">
+                          <img src="${img.src}" alt="${img.title || project.name + " preview " + (i + 1)}" loading="lazy">
+                        </div>`).join("")}
+                    </div>
+                    ${images.length > 1 ? `
+                      <button type="button" class="carousel-btn carousel-prev" aria-label="Previous image">&#10094;</button>
+                      <button type="button" class="carousel-btn carousel-next" aria-label="Next image">&#10095;</button>
+                      <span class="carousel-count">1 / ${images.length}</span>` : ""}
                   </div>
-                  ${images.length > 1 ? `
-                    <button type="button" class="carousel-btn carousel-prev" aria-label="Previous image">&#10094;</button>
-                    <button type="button" class="carousel-btn carousel-next" aria-label="Next image">&#10095;</button>
-                    <span class="carousel-count">1 / ${images.length}</span>` : ""}
-                </div>
-              </div>`;
-          })()}
+                </div>`;
+            })()}
 
-          ${project.type ? `
-          <p class="project-type">${project.type}</p>` : ""}
+            ${project.type ? `
+            <p class="project-type">${project.type}</p>` : ""}
 
-          ${project.contributors ? `
-          <div class="project-contributors-row">
-            <span>${project.contributors}</span>
-          </div>` : ""}
+            ${project.contributors ? `
+            <div class="project-contributors-row">
+              <span>${project.contributors}</span>
+            </div>` : ""}
 
-          ${project.links.map(link => `
-          <div class="project-link-row">
-            <span>${link.label}</span>
-            <a href="${link.url}" target="_blank">${link.url}</a>
-          </div>`).join("")}
+            ${(project.links || []).map(link => `
+            <div class="project-link-row">
+              <span>${link.label}</span>
+              <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.url}</a>
+            </div>`).join("")}
 
-          <h4 class="project-skills-title">Skills and Tools I used</h4>
-          <div class="project-tags">
-            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            ${project.tags && project.tags.length ? `
+            <h4 class="project-skills-title">Skills and Tools I Used</h4>
+            <div class="project-tags">
+              ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+            </div>` : ""}
           </div>
-        </div>
 
-        <!-- Right side -->
-        <div class="project-right">
-          <h3 class="project-name">${project.name}</h3>
-          <p class="project-desc">${project.description}</p>
+          <!-- Right side -->
+          <div class="project-right">
+            <h4 class="project-right-title">${project.rightTitle}</h4>
+            <p class="project-desc">${project.description}</p>
 
-          <h4 class="project-list-name">${project.listTitle}</h4>
-          
-          <ul class="project-list">
-            ${project.list.map(item => `<li>${item}</li>`).join("")}
-          </ul>
+            <h4 class="project-list-name">${project.listTitle}</h4>
+
+            <ul class="project-list">
+              ${project.list.map(item => `<li>${item}</li>`).join("")}
+            </ul>
+          </div>
 
         </div>
       </div>

@@ -59,6 +59,7 @@ const projects = [
 
     tags: ["Unity", "C#", "2D Top-Down", "UI/UX Design", "State Machine", "Level Design", "Game Design", "Game Development", "Game Programming", "Heads-Up Display (HUD)", "Visual Studio Code", "GitHub", "GitKraken"],
 
+    rightTitle: "A 2D top-down defensive survival game",
     description: "Cycle of the Dead (COTD) is a 2D top-down defensive survival game with roguelike elements. Players collect coins to buy defenses and other items from the shop, growing stronger and surviving longer as they defeat waves of enemies. Through this project, I learned the process of developing a top-down game in Unity, including how UI, state machines, Heads-Up Displays (HUDs), keybinding, and visuals are built in game development.",
     
     listTitle: "What I Did",
@@ -97,6 +98,7 @@ const projects = [
 
     tags: ["Unity", "C#", "2D Platformer", "UI/UX Design", "Level Design", "Game Design", "Game Development", "Game Programming", "Heads-Up Display (HUD)", "Visual Studio Code", "GitHub", "GitKraken"],
 
+    rightTitle: "A 2D platformer game",
     description: "Blade of the Beyond is a 2D platformer game in which the player must jump across precise platforms and avoid hazards. As the swordsman, the player defeats enemies encountered in the dungeon and the bosses that appear along the way. Through this project, I learned the process of developing a platformer game in Unity and how UI is built in game development.",
     
     listTitle: "What I Did",
@@ -125,6 +127,7 @@ const projects = [
 
     tags: ["HTML", "CSS", "JavaScript", "Front-end Development", "UI Design", "Visual Studio Code", "GitHub", "GitKraken"],
 
+    rightTitle: "A personal portfolio website",
     description: "A personal portfolio website that showcases my bio, skills, best projects, and other background information, built with HTML, CSS, and JavaScript. I designed responsive layouts and interactive user interfaces that look great on desktops, tablets, and phones. I also focused on clean organization, consistent styling, and smooth navigation so visitors can quickly find what they're looking for. Through this project, I learned the fundamentals of front-end web development, including HTML structure, CSS styling, JavaScript interactivity, and UI design principles. It also taught me how to organize a project with a clean file structure, use GitHub to host my project, and deploy a live website.",
 
     listTitle: "What I Did",
@@ -158,6 +161,7 @@ const projects = [
 
     tags: ["HTML", "CSS", "JavaScript", "Front-end Development", "UI Design", "Kate Text Editor"],
 
+    rightTitle: "A responsive front-end e-commerce prototype",
     description: "Graphic Reality is a responsive front-end e-commerce prototype featuring product listings, a shopping cart UI, admin portal mockups, and traffic tracking functionality, built with HTML, CSS, and JavaScript. I designed responsive layouts and interactive user interfaces for both customer and admin pages. Through this project, I learned the fundamentals of front-end web development, including HTML, CSS, JavaScript, and UI design.",
     
     listTitle: "What I Did",
@@ -189,6 +193,7 @@ const projects = [
 
     tags: ["Big Data", "Apache Spark", "PySpark", "Python", "YouTube Dataset", "Sorting", "Data Analysis", "Data Transformation", "Trend Analysis", "Visual Studio Code"],
 
+    rightTitle: "A data analysis application",
     description: "YouTube Data Analyzer is a data analysis application built with Apache Spark, PySpark, and Python in Visual Studio Code to process and analyze a large-scale YouTube dataset. It uses top-k queries to identify the categories with the highest video upload volume, the highest-rated and most popular videos, as well as other features such as Range Queries and User Identification. Through this project, I learned about Python, data analysis, and Apache Spark.",
     
     listTitle: "What I Did",
