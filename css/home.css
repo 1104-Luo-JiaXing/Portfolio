@@ -921,7 +921,7 @@
 
   
   .project-name {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .project-desc {
@@ -942,7 +942,7 @@
   }
 
   .project-right-title {
-    font-size: 1.55rem;
+    font-size: 1.35rem;
   }
 }
 
@@ -950,7 +950,7 @@
 @media (max-width: 700px) {
 
   .project-name {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
   .project-link-row {
@@ -1005,7 +1005,7 @@
   }
 
   .project-right-title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 }
 
